@@ -11,3 +11,5 @@ ADAIMI_REPLAY_JSON = {'result': True, 'time': timestamp, 'hidden_id_cookie': {'e
 ADAIMI_REPLAY = json.dumps(ADAIMI_REPLAY_JSON)
 
 PARENT_FAIL_REPLAY = 'FAIL'
+PARENT_LOCK_OUT_REPLAY_JSON ={"msg": {"dh": 536870912}, "type": 0, "user": "jen", "time": time.time()}
+PARENT_LOCK_OUT_REPLAY = json.dumps(PARENT_LOCK_OUT_REPLAY_JSON)
